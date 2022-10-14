@@ -1,0 +1,59 @@
+1. 학습플랫폼 >> 학습모델 설계
+
+학습 모델 설계
+
+(1) Step 1. 기본 정보
+
+학습모델명  	kody_trainmodel_diabetes
+전처리모델
+사용 체크
+kody_premodel_diabetes		kody_premodel_diabetes
+
+(2) Step 2. 모델 설계
+
+문제유형 		Classification
+
+알고리즘 		SVM
+
+평가방법
+Train-Test Split  80
+
+
+(3) Step 3. 상세 설계
+알고리즘 선택 시 상세 설계가 가능합니다. ( step 2. 먼저 진행 )
+
+# 공통 파라미터
+
+초기화방법  Xavier uniform
+
+
+## 알고리즘 파라미터
+
+n_neighbors *	KNN 파라미터	3
+
+kernel *		Decision Boundary 커널		linear
+C *		Decision Boundary 조정 값		1
+gamma *		데이터 하나당 영향을 끼치는 범위	scale
+
+
+
+저장
+
+
+2.  학습플랫폼 >> 학습모델 관리
+
+학습 모델 관리
+
+번호	카테고리		알고리즘		학습명		등록자			실행정보					학습상태
+									수행시작일시	수행종료일시	결과(Accuracy)
+
+1	Classification	SVM	    kody_trainmodel_diabetes	kody			-		-		-	시작전
+
+
+선택하여 
+
+누름
+
+
+
+

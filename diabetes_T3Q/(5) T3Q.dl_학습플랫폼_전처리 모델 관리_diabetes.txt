@@ -1,0 +1,47 @@
+1. 학습플랫폼 >> 전처리 모델 관리
+전처리 모델 상세
+
+
+(1) Step 1. 기본 정보
+
+모델명		kody_premodel_diabetes
+참조 데이터셋	kody_diabetes_dataset
+
+(2) Step 2. 데이터셋 컬럼정보
+       사용여부	컬럼		데이터 분포도	타입		ID	LABEL
+1		id				int64		right
+2		pregnancies			int64		
+3		glucose				int64		
+4		bloodpressure			int64		
+5		skinthickness			int64		
+6		insulin				int64		
+7		bmi				float64		
+8		diabetespedigreefunction		float64		
+9		age				int64		
+10		outcome				int64			right
+
+
+
+(3) Step 3. 전처리 룰 정보
+
+소스컬럼												전처리룰
+pregnancies , glucose , bloodpressure , skinthickness , insulin , bmi , diabetespedigreefunction , age	min_max_normalization
+outcome												ordinal
+
+
+(4) Step 4. 전처리 실행정보
+
+번호	전처리명			데이터셋			처리시작일시	처리종료일시	상태	전처리
+1	kody_premodel_diabetes	kody_diabetes_dataset		없음		없음		등록	 상세/실행/중단/삭제  
+
+
+위 실행 버튼을 눌러 전처리를 수행함
+상태 완료 
+확인 후
+
+학습모델 설계 버튼 누름
+
+
+
+
+

@@ -1,0 +1,63 @@
+1. 학습플랫폼 >> 학습모델 관리
+
+학습모델 상세
+
+(1) Step 1. 학습모델 기본정보
+
+모델명		kody_trainmodel_diabetes
+전처리 모델명	kody_premodel_diabetes	kody_premodel_diabetes
+
+
+(2) Step 2. 학습모델 알고리즘 정보
+
+문제유형  Classification
+알고리즘  SVM
+평가방법 / 평가값  Train/test split  0.2
+
+
+
+(3) Step 3. 학습수행 관리정보
+
+시작전  learnexec-135-2021-09-12 시작전
+
+
+# 공통 파라미터
+
+초기화방법	Xavier uniform
+랜덤seed		777
+CPU		2  코어 
+Memory		128  Gi
+kernel		linear
+C		1
+gamma		scale
+	
+
+
+
+## 학습상태
+학습상태  시작전   [ - ~ - ]
+Accuracy 
+Loss 
+Confusion Matrix 
+Precision/Recall/F1-score
+
+
+### 학습로그
+
+실행 버튼 누르고
+
+진행중
+완료
+
+확인 후 모델 배포
+
+아래의 팝업창이 뜨면
+
+학습모델 배포
+모델명을 입력하고 추론모델로 배포가 가능합니다.(50자이내)
+
+kody_trainmodel_diabetes-2021-09-12
+
+배포 버튼 누름
+
+

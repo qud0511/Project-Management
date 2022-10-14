@@ -1,0 +1,87 @@
+1. 실시간 추론 파이프라인
+
+T3Q.ai >> 실시간 추론 >> 파이프라인 등록
+
+1) 실시간 추론 템플릿
+
+Log to API(FileUpload)  	선택
+Image to API(FileUpload)
+로그파일을 업로드하여 실시간 추론 및 결과저장
+
+파이프라인 정보
+파이프라인 이름  	kody_winequality_inference
+파이프라인 설명
+
+2) Properties 설정
+
+Processor			Properties	Value
+DBCPConnectionPool	Password		postgres
+
+
+3) Variable 설정
+Name						Value
+(1) Log_API_FileUpload_AvroSchema	
+
+
+{ 
+   "type": "record",
+   "name": "TestRecord",
+   "fields" : [
+        {"name": "fixed_acidity", "type": [ "null", "string" ]},
+        {"name": "volatile_acidity", "type": [ "null", "string" ]},
+        {"name": "citric_acid", "type": [ "null", "string" ]},
+        {"name": "residual_sugar", "type": [ "null", "string" ]},
+        {"name": "chlorides", "type": [ "null", "string" ]},
+        {"name": "free_sulfur_dioxide", "type": [ "null", "string" ]},
+        {"name": "total_sulfur_dioxide", "type": [ "null", "string" ]},
+        {"name": "density", "type": [ "null", "string" ]},
+        {"name": "ph", "type": [ "null", "string" ]},
+        {"name": "sulphates", "type": [ "null", "string" ]},
+        {"name": "alcohol", "type": [ "null", "string" ]}
+    ]
+}
+
+
+
+** 위 AvroSchema 작성시 id와 label 제외할 것
+
+(2) Log_API_FileUpload_API_URL	
+
+/model/api/3b827/inference
+
+(3) Log_API_FileUpload_Topic	
+
+kody_winequality_topic
+
+(4) Log_API_FileUpload_SourcePath	
+/kody_work/winequality_inference
+
+저장 버튼 누르고
+
+2. 파이프라인 관리 >> 실시간 추론
+
+파이프라인(kody_winequality_inference) 우측 상단의 기능 버튼 클릭(시작)
+
+(1) T3Q.ai >> 서비스 메뉴 >> FileViewer
+
+Log_API_FileUpload_SourcePath : 기 설정한 업로드 경로(/kody/winequality_inference)에 
+
+** winequality_inference 폴더는 새로 생성해줘야 됨
+
+데이터 파일 업로드
+
+(2) 데이터 적재 확인
+T3Q.ai >> 서비스 메뉴 >> PgAdmin
+
+inference_origin
+inference_result
+
+테이블 조회
+
+select * from inference_origin;
+
+select * from inference_result;
+
+데이터 저장 확인
+
+

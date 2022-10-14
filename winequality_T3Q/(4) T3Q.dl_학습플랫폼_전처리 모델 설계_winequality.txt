@@ -1,0 +1,70 @@
+1. 학습플랫폼 >> 전처리 모델 설계
+전처리 모델 설계
+
+(1) Step 1. 기본 정보
+기본정보를 입력하고, step별로 진행해주세요.
+
+kody_premodel_winequality
+
+(2) Step 2. 데이터셋 등록
+참조 데이터셋을 등록해야 합니다.
+
+kody_winequality_dataset
+
+(3) Step 3. ID/LABEL 지정
+컬럼별 사용여부 및 ID/LABEL 지정해야 합니다. ( step 2. 먼저 진행 )
+ 
+사용여부		컬럼		데이터 분포도	타입		ID	LABEL
+
+right		id				int64		right
+		fixed_acidity			float64		
+		volatile_acidity			float64		
+		citric_acid				float64		
+		residual_sugar			float64		
+		chlorides				float64		
+		free_sulfur_dioxide			int64		
+		total_sulfur_dioxide		int64		
+		density				float64		
+		ph				float64		
+		sulphates				float64		
+		alcohol				float64		
+		quality				int64			right
+
+
+
+(4) Step 4. 전처리 규칙 정보
+저장 후 전처리 규칙을 실행할 수 있습니다.
+전처리 규칙 등록 버튼 누르고
+================================================
+데이터 전처리 룰
+전처리규칙 세부설정가능
+
+소스컬럼
+id ( int64 )
+fixed_acidity,volatile_acidity,citric_acid,residual_sugar,chlorides,free_sulfur_dioxide,total_sulfur_dioxide,density,ph,sulphates,alcohol	변환함수		min_max_normalization
+quality														변환함수		ordinal
+
+
+전처리규칙 *
+변환함수	
+변환서비스
+
+================================================
+저장
+
+전처리 규칙 등록 후 화면
+
+
+Step 4. 전처리 규칙 정보
+저장 후 전처리 규칙을 실행할 수 있습니다.
+
+소스컬럼														전처리규칙	전처리규칙 상세정보	액션
+
+fixed_acidity,volatile_acidity,citric_acid,residual_sugar,chlorides,free_sulfur_dioxide,total_sulfur_dioxide,density,ph,sulphates,alcohol	변환함수		min_max_normalization
+quality														변환함수		ordinal
+
+
+저장
+
+
+

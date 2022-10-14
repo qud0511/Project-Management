@@ -1,0 +1,63 @@
+2. 데이터 변환 파이프라인
+
+
+1) 데이터 변환 파이프라인 템플릿 생성
+
+T3Q.ai >> 데이터 변환 >> 파이프라인 등록
+
+(1) 데이터 변환 템플릿
+데이터 변환 템플릿
+Postgres to Filestorage  RDB에 수집된 파일을 변환하여 Filestorage 저장
+
+파이프라인 정보
+파이프라인 이름 kody_winequality_transformation
+파이프라인 설명
+
+(2) Properties 설정
+Password postgres
+
+*** Postgres_Filestorage_TargetPath를	/kody/winequality_transformation
+으로 하면 /kody/ 밑에 winequality_transformation 폴더 자동으로 생성됨
+
+(3) Variable 설정
+Variable 설정
+Postgres_Filestorage_TargetPath	/kody/winequality_transformation
+Postgres_Filestorage_TableName	kody_winequality_collection
+Postgres_Filestorage_PK	             reg_dt
+Postgres_Filestorage_AvroSchema
+
+{ 
+   "type": "record",
+   "name": "TestRecord",
+   "fields" : [
+        {"name": "id", "type": [ "null", "string" ]},
+        {"name": "fixed_acidity", "type": [ "null", "string" ]},
+        {"name": "volatile_acidity", "type": [ "null", "string" ]},
+        {"name": "citric_acid", "type": [ "null", "string" ]},
+        {"name": "residual_sugar", "type": [ "null", "string" ]},
+        {"name": "chlorides", "type": [ "null", "string" ]},
+        {"name": "free_sulfur_dioxide", "type": [ "null", "string" ]},
+        {"name": "total_sulfur_dioxide", "type": [ "null", "string" ]},
+        {"name": "density", "type": [ "null", "string" ]},
+        {"name": "ph", "type": [ "null", "string" ]},
+        {"name": "sulphates", "type": [ "null", "string" ]},
+        {"name": "alcohol", "type": [ "null", "string" ]},
+        {"name": "quality", "type": [ "null", "string" ]}
+    ]
+}
+
+
+저장
+
+(4) T3Q.cep >> 데이터 변환 
+파이프라인(kody_winequality_transformation) 우측 상단의 기능 버튼 클릭(시작)
+
+(5) T3Q.ai >> 서비스 메뉴 >> FileViewer
+
+Postgres_Filestorage_TargetPath : 기 설정한 경로(/kody/winequality_transformation)에 
+
+데이터 파일 적재확인
+
+
+
+

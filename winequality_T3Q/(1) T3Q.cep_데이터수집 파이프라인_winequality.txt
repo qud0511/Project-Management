@@ -1,0 +1,111 @@
+1. 데이터 수집 파이프라인
+
+T3Q.ai >> 서비스 메뉴 >> PgAdmin
+
+1) RDB 스키마 생성(테이블) 
+
+pgAdmin 접속하여
+
+datalake >> ---------  >> Tables 아래에
+
+테이블 생성
+
+Tools>Query Tool 메뉴 선택
+
+-- Table: public.kody_winequality_collection
+
+-- DROP TABLE public.kody_winequality_collection;
+
+CREATE TABLE public.kody_winequality_collection
+(
+    id character varying COLLATE pg_catalog."default",
+    fixed_acidity character varying COLLATE pg_catalog."default",
+    volatile_acidity character varying COLLATE pg_catalog."default",
+    citric_acid character varying COLLATE pg_catalog."default",
+    residual_sugar character varying COLLATE pg_catalog."default",
+    chlorides character varying COLLATE pg_catalog."default",
+    free_sulfur_dioxide character varying COLLATE pg_catalog."default",
+    total_sulfur_dioxide character varying COLLATE pg_catalog."default",
+    density character varying COLLATE pg_catalog."default",
+    ph character varying COLLATE pg_catalog."default",
+    sulphates character varying COLLATE pg_catalog."default",
+    alcohol character varying COLLATE pg_catalog."default",
+    quality character varying COLLATE pg_catalog."default",
+    reg_dt timestamp without time zone NOT NULL DEFAULT now()
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.kody_winequality_collection
+    OWNER to postgres;
+
+# 데이터 적재 확인
+select * from kody_winequality_collection
+
+2) 데이터 수집 파이프라인 템플릿 생성
+
+T3Q.ai >> 데이터 수집 >> 파이프라인 등록
+
+(1) 데이터 수집 템플릿
+Video to Filestorage(SFTP)
+Log to Postgres(FileUpload)  선택
+Image to Filestorage(SFTP)
+Log to Postgres(SFTP)
+Log to Filestorage(SFTP)
+파일을 업로드하여 postgres에 수집
+
+파이프라인 정보
+파이프라인 이름  kody_winequality_collection
+파이프라인 설명  
+
+(2) Properties 설정
+Password postgres
+
+(3) Variable 설정
+Name					Value
+Log_Postgres_FileUpload_TableName		kody_winequality_collection
+
+Log_Postgres_FileUpload_SourcePath		/kody/winequality_collection
+
+Log_Postgres_FileUpload_AvroSchema	
+
+{ 
+   "type": "record",
+   "name": "TestRecord",
+   "fields" : [
+        {"name": "id", "type": [ "null", "string" ]},
+        {"name": "fixed_acidity", "type": [ "null", "string" ]},
+        {"name": "volatile_acidity", "type": [ "null", "string" ]},
+        {"name": "citric_acid", "type": [ "null", "string" ]},
+        {"name": "residual_sugar", "type": [ "null", "string" ]},
+        {"name": "chlorides", "type": [ "null", "string" ]},
+        {"name": "free_sulfur_dioxide", "type": [ "null", "string" ]},
+        {"name": "total_sulfur_dioxide", "type": [ "null", "string" ]},
+        {"name": "density", "type": [ "null", "string" ]},
+        {"name": "ph", "type": [ "null", "string" ]},
+        {"name": "sulphates", "type": [ "null", "string" ]},
+        {"name": "alcohol", "type": [ "null", "string" ]},
+        {"name": "quality", "type": [ "null", "string" ]}
+    ]
+}
+
+
+저장
+
+(4) T3Q.cep >> 데이터 수집 
+파이프라인(kody_winequality_collection) 우측 상단의 기능 버튼 클릭(시작)
+
+(5) T3Q.ai >> 서비스 메뉴 >> FileViewer
+
+Log_Postgres_FileUpload_SourcePath : 기 설정한 업로드 경로(/kody/winequality_collection)에 
+
+데이터 파일 업로드
+
+(6) 데이터 적재 확인
+T3Q.ai >> 서비스 메뉴 >> PgAdmin
+select * from kody_winequality_collection
+
+
+

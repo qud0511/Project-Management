@@ -1,0 +1,61 @@
+1. 학습플랫폼 >> 학습모델 관리
+
+학습모델 상세
+
+(1) Step 1. 학습모델 기본정보
+
+모델명		kody_trainmodel_winequality
+전처리 모델명	kody_premodel_winequality		kody_premodel_winequality
+
+
+(2) Step 2. 학습모델 알고리즘 정보
+
+문제유형  		Regression
+알고리즘  		keras_LINEAR
+평가방법 / 평가값  	Train/test split  0.2
+
+
+(3) Step 3. 학습수행 관리정보
+
+시작전		learnexec-137-2021-09-13	시작전
+
+# 공통 파라미터
+	
+Learning rate		직접입력		0.001
+최적화방법		Adam
+랜덤seed			777
+학습수행횟수 (epoch) *	10
+배치 사이즈 (개) *		100
+CPU			4	 코어 
+Memory			256	Gi
+
+
+
+
+## 학습상태
+학습상태  시작전   [ - ~ - ]
+Accuracy 
+Loss 
+Confusion Matrix 
+Precision/Recall/F1-score
+
+
+### 학습로그
+
+실행 버튼 누르고
+
+진행중
+완료
+
+확인 후 모델 배포
+
+아래의 팝업창이 뜨면
+
+학습모델 배포
+모델명을 입력하고 추론모델로 배포가 가능합니다.(50자이내)
+
+kody_trainmodel_winequality-2021-09-13
+
+배포 버튼 누름
+
+

@@ -1,0 +1,84 @@
+1. 추론플랫폼 >> 추론API관리
+
+추론 API 조회
+
+신규등록 버튼 누르고
+
+
+1) 추론플랫폼 >> 추론API관리
+
+추론 API 등록
+
+추론모델을 검색하여
+
+번호	추론모델명				등록일			등록자
+
+1	kody_trainmodel_winequality-2021-09-13	2021-09-13 11:24:55	kody
+
+선택하고
+
+API 명*		kody_api_winequality
+추론모델*	kody_trainmodel_winequality-2021-09-13
+사용여부		체크
+
+저장 버튼 누름
+
+2) 추론플랫폼 >> 추론API관리
+
+추론 API 조회
+
+번호	API명			생성일			사용여부	등록자	카테고리					모델정보
+											알고리즘			모델명				배포일자
+
+1	kody_api_winequality	2021-09-13 11:45:29	운영중	kody	Regression	keras_LINEAR	kody_trainmodel_winequality-2021-09-13	2021-09-13 11:24:55
+
+
+확인하여 선택
+
+
+3) 추론플랫폼 >> 추론API관리
+
+추론 API 상세
+
+# Step 1. 기본정보
+API 명*	kody_api_winequality
+추론모델	kody_trainmodel_winequality-2021-09-13
+사용여부 right
+	
+# API 사용정보
+호출 URL		http://idro3vub.dl.nhnes.net/model/api/3b827/inference
+
+추론 Test Data 예시
+{
+"data": "[[fixed_acidity,volatile_acidity,citric_acid,residual_sugar,chlorides,free_sulfur_dioxide,total_sulfur_dioxide,density,ph,sulphates,alcohol]]"
+}
+
+Input
+{
+"data": "[[fixed_acidity,volatile_acidity,citric_acid,residual_sugar,chlorides,free_sulfur_dioxide,total_sulfur_dioxide,density,ph,sulphates,alcohol]]"
+}
+
+Run 버튼 누름
+
+Output
+
+
+
+
+호출 URL /model 이후 부분만 카피하여 nifi 에서 사용
+/model/api/3b827/inference
+
+
+T3Q.ai 실시간 추론에서 진행
+
+
+
+
+
+
+
+
+
+	
+
+

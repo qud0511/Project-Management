@@ -1,0 +1,41 @@
+해당 프로젝트 선택 후
+
+1. 학습플랫폼 >> 데이터셋 관리
+
+데이터셋 관리
+
+등록
+
+(1) 데이터셋 등록
+
+데이터셋 명  kody_diabetes_dataset
+
+선택 경로 
+
+FileViewer의 데이터 변환 파이프라인을 거친
+
+kody_work/diabetes_conversion/kody_diabetes_***.csv
+
+파일을 선택하고
+
+저장
+
+(2) 학습플랫폼 >> 데이터셋 관리
+
+데이터셋 관리
+
+ 
+번호	데이터셋명		등록자	등록일자
+
+1	kody_diabetes_dataset	kody	2021-09-12 05:10:02
+
+선택
+
+(3) 학습플랫폼 >> 데이터셋 관리
+
+kody_diabetes_dataset
+
+전처리 모델 설계 
+
+버튼 누름
+
