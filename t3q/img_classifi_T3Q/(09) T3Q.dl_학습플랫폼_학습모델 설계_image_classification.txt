@@ -1,0 +1,40 @@
+# T3Q.dl_학습플랫폼_학습모델 설계_image_classification
+
+학습플랫폼 >> 학습모델 설계
+
+1. [T3Q]AI 훈민정음 >> 학습플랫폼 >> 학습모델 설계
+
+
+학습 모델 설계
+
+1) Step 1. 기본 정보
+학습모델명  	image_classification_trainmodel
+
+전처리모델
+사용 체크
+image_classification_premodel	 	image_classification_premodel
+
+2) Step 2. 모델 설계
+문제유형 Classification
+
+알고리즘 image_classification_train
+
+평가방법
+#Train-Test Split	  80
+None
+
+3) Step 3. 상세 설계
+알고리즘 선택 시 상세 설계가 가능합니다. ( step 2. 먼저 진행 )
+
+(1) 공통 파라미터
+
+학습수행횟수 (epoch) *	20
+배치 사이즈 (개) *		50
+
+
+저장
+
+
+
+
+

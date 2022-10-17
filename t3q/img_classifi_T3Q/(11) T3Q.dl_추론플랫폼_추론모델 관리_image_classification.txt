@@ -1,0 +1,102 @@
+# T3Q.dl_추론플랫폼_추론모델 관리_image_classification
+
+추론플랫폼 >> 추론모델관리
+
+1. [T3Q]AI 훈민정음 >> 추론플랫폼 >> 추론모델관리
+
+추론모델 관리
+
+번호		카테고리 > 알고리즘			모델명				서비스 타입	상태	배포자	배포일
+1	Classification > image_classification_train	image_classification_trainmodel-2022-08-24	일반		중지	delkin	2022-08-24 05:39:41
+
+Showing 1 to 1 of 1 entries
+
+선택하여 누르고
+
+
+2. [T3Q]AI 훈민정음 >> 추론플랫폼 >> 추론모델관리
+
+1) 추론모델 정보
+
+중지	image_classification_trainmodel-2022-08-24
+배포일 : 2022-08-24 14:39:41
+
+서비스 시작 버튼 누르고
+
+서비스 리소스 설정
+CPU 2 코어 
+GPU 0 코어 
+Memory 8 Gi
+확인 버튼 누름
+
+추론모델 서비스를 시작하시겠습니까?
+최대 5분 정도 소요될 수 있습니다.
+확인 버튼 누름
+
+추론모델 서비스가 기동되었습니다.
+OK 버튼 누름
+
+2) 추론모델 정보
+운영중	image_classification_trainmodel-2022-08-24
+배포일 : 2022-08-24 14:39:41
+
+(1) 리소스 현황 
+CPU	 	2
+GPU	 	0
+Memory 		8Gi
+
+(2) 전처리 정보 / 학습 정보
+
+전처리 정보	상세보기
+학습 정보		상세보기
+
+
+3) 추론모델 검증
+(1) 추론모델테스트
+요청		입력 예시: [['/data/aip/file_group/pm/pm_334/ds_441/image/1/1230.png']]
+요청		[['iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAIAAAD9b0jDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACSSURBVEhL7Y6LCoAgDEX9/5823V0653CSBgkdCPa6x0J8gV+6nw9LQ2g8hjRdPIPzkPJMgN0M5V6mai+nk2TfnUUBGqlcuMh7FaxSFADtAHWmIo0U0P3I2x/oNn+dglIZ7gXmXE1saYEMvJW1Qs0daYJUDI861MqXJkjoPMwVMSV1OV26DnRg9R9Nful+TpHGeAEq4up46Jf19gAAAABJRU5ErkJggg==']]
+
+테스트 버튼 누름
+
+응답		"{\"inference\":[\"envelope\"]}\n"
+
+
+(2) 로그
+
+2022-08-24 05:40:35,038 [ WARN] root: @@@@@@@@@@@@@@ in df [['iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAIAAAD9b0jDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACSSURBVEhL7Y6LCoAgDEX9/5823V0653CSBgkdCPa6x0J8gV+6nw9LQ2g8hjRdPIPzkPJMgN0M5V6mai+nk2TfnUUBGqlcuMh7FaxSFADtAHWmIo0U0P3I2x/oNn+dglIZ7gXmXE1saYEMvJW1Qs0daYJUDI861MqXJkjoPMwVMSV1OV26DnRg9R9Nful+TpHGeAEq4up46Jf19gAAAABJRU5ErkJggg==']]
+2022-08-24 05:40:35,053 [ INFO] root: [hunmin log] df :                                                    0
+0  iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAIAAAD9b0jDAA...
+2022-08-24 05:40:35,053 [ INFO] root: [hunmin log] df.shape : (1, 1)
+2022-08-24 05:40:35,053 [ INFO] root: [hunmin log] type(df) : <class 'pandas.core.frame.DataFrame'>
+2022-08-24 05:40:35,053 [ INFO] root: [hunmin log] the end line of the function [transform]
+2022-08-24 05:40:35,053 [ INFO] root: [hunmin log] the start line of the function [exec_inference]
+2022-08-24 05:40:35,053 [ INFO] root: [hunmin log] model.summary() :
+2022-08-24 05:40:35,053 [ INFO] root: Model: "sequential"
+2022-08-24 05:40:35,053 [ INFO] root: _________________________________________________________________
+2022-08-24 05:40:35,053 [ INFO] root: Layer (type)                 Output Shape              Param #   
+2022-08-24 05:40:35,053 [ INFO] root: =================================================================
+2022-08-24 05:40:35,054 [ INFO] root: conv2d (Conv2D)              (None, 28, 28, 32)        320       
+2022-08-24 05:40:35,054 [ INFO] root: _________________________________________________________________
+2022-08-24 05:40:35,054 [ INFO] root: conv2d_1 (Conv2D)            (None, 28, 28, 64)        18496     
+2022-08-24 05:40:35,054 [ INFO] root: _________________________________________________________________
+2022-08-24 05:40:35,055 [ INFO] root: dropout (Dropout)            (None, 28, 28, 64)        0         
+2022-08-24 05:40:35,055 [ INFO] root: _________________________________________________________________
+2022-08-24 05:40:35,055 [ INFO] root: conv2d_2 (Conv2D)            (None, 28, 28, 64)        36928     
+2022-08-24 05:40:35,055 [ INFO] root: _________________________________________________________________
+2022-08-24 05:40:35,055 [ INFO] root: max_pooling2d (MaxPooling2D) (None, 14, 14, 64)        0         
+2022-08-24 05:40:35,055 [ INFO] root: _________________________________________________________________
+2022-08-24 05:40:35,055 [ INFO] root: flatten (Flatten)            (None, 12544)             0         
+2022-08-24 05:40:35,055 [ INFO] root: _________________________________________________________________
+2022-08-24 05:40:35,056 [ INFO] root: dense (Dense)                (None, 32)                401440    
+2022-08-24 05:40:35,056 [ INFO] root: _________________________________________________________________
+2022-08-24 05:40:35,056 [ INFO] root: dropout_1 (Dropout)          (None, 32)                0         
+2022-08-24 05:40:35,056 [ INFO] root: _________________________________________________________________
+2022-08-24 05:40:35,056 [ INFO] root: dense_1 (Dense)              (None, 10)                330       
+2022-08-24 05:40:35,056 [ INFO] root: =================================================================
+2022-08-24 05:40:35,056 [ INFO] root: Total params: 457,514
+2022-08-24 05:40:35,057 [ INFO] root: Trainable params: 457,514
+2022-08-24 05:40:35,057 [ INFO] root: Non-trainable params: 0
+2022-08-24 05:40:35,057 [ INFO] root: _________________________________________________________________
+2022-08-24 05:40:35,262 [ INFO] root: [hunmin log] result : {'inference': 'envelope'}
+2022-08-24 05:40:35,262 [ INFO] root: [hunmin log] the end line of the function [inference]
+

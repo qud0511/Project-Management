@@ -1,0 +1,67 @@
+# 프로젝트 설정_전처리 모듈 관리_image_classification
+
+[T3Q]AI 훈민정음 >> 프로젝트 설정 >> 전처리모듈 관리
+
+
+1. [T3Q]AI 훈민정음 >> 프로젝트 설정 >> 전처리모듈 관리
+
+전처리모듈 상세
+
+전처리 모듈 관리 +(전처리 모듈 추가) 버튼 누르고
+
+전처리모듈 등록
+
+1) 기본 정보 
+
+전처리명		image_classification_premodule
+실행환경		image_classification_env
+GPU 지원 여부	GPU 지원(체크)
+
+2) 입력 형태
+
+file
+
+3) 출력 형태
+
+default
+
+4) 파라미터
+
+
+5) 소스 코드
+
+파일 업로드 버튼 누르고
+
+image_classification_preprocess.py
+
+image_classification_preprocess_sub.py
+
+LICENSE.txt
+
+README.txt
+
+platform_process.txt
+
+위 5개의 파일을 압축한
+
+T3Q.ai_platform_image_classification_preprocess.zip
+
+파일을 선택하여 파일을 업로드함
+
+(1) 실행모듈 /image_classification_preprocess.py
+	    /image_classification_preprocess_sub.py
+	    /LICENSE.txt
+	    /README.txt
+	    /platform_process.txt
+
+image_classification_preprocess.py 파일 선택하고
+
+마우스 우클릭하여 실행모듈 선택함
+
+(2) 선택파일 /image_classification_preprocess.py
+	    /image_classification_preprocess_sub.py
+	    /LICENSE.txt
+	    /README.txt
+	    /platform_process.txt
+저장
+

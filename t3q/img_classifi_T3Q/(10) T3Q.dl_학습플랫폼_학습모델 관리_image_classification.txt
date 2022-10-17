@@ -1,0 +1,197 @@
+# T3Q.dl_학습플랫폼_학습모델 관리_image_classification
+
+학습플랫폼 >> 학습모델 관리
+
+1. [T3Q]AI 훈민정음 >> 학습플랫폼 >> 학습모델 관리
+
+번호	카테고리		알고리즘			학습명				등록자				실행정보					학습상태
+												수행시작일시	수행종료일시	결과(Accuracy)
+1	Classification	image_classification_train	image_classification_trainmodel	delkin		-		-		-			시작전
+
+선택하고
+
+2. [T3Q]AI 훈민정음 >> 학습플랫폼 >> 학습모델 관리
+
+학습모델 상세
+
+1) Step 1. 학습모델 기본정보
+모델명  		image_classification_trainmodel
+전처리 모델명  	image_classification_premodel		image_classification_premodel
+
+2) Step 2. 학습모델 알고리즘 정보
+문제유형  	Classification
+알고리즘  	image_classification_train
+평가방법 / 평가값  none	없음
+
+3) Step 3. 학습수행 관리정보
+
+시작전	learnexec-3611-2022-08-24	시작전
+
+(1) 공통 파라미터
+
+랜덤seed			777
+학습수행횟수 (epoch) *	20
+배치 사이즈 (개) *		10
+CPU			8 코어 
+Memory			16 Gi
+GPU			2 코어 
+
+(2) 학습상태
+학습상태  시작전   [ - ~ - ]
+
+Accuracy 	Loss		Confusion Matrix 
+
+실행 버튼 누르고
+
+완료  1분 [ 2022-08-24 14:35:47 ~ 2022-08-24 14:37:22 ]
+
+확인 후 
+
+(3) 학습로그
+2022-08-24 05:35:47,465 [ INFO] root: ### Train params ###
+2022-08-24 05:35:47,466 [ INFO] root: {'learn_id': 3057, 'learn_e_id': 3611, 'workspace_id': 't3qai', 'user_id': None, 'epoch': None, 'comm_method': 'db', 'log_path': '/data/aip/logs', 'cpu': '8', 'memory': '16Gi', 'gpu': '2', 'train_profiling': True, 'ds_idx': 1}
+2022-08-24 05:35:47,466 [ INFO] root: ### end ###
+2022-08-24 05:35:47,713 [ WARN] root: datasource_repo_id : 159, datasource_repo_obj : <DataSourceRepo 159>, repo_type : path
+2022-08-24 05:35:47,768 [ INFO] root: algo_path=/data/aip/logs/t3qai/mods/algo_577/1
+2022-08-24 05:35:49,541 [DEBUG] tensorflow: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-08-24 05:35:50,622 [ INFO] root: [hunmin log] tensorflow ver : 2.4.1
+2022-08-24 05:35:51,067 [ INFO] root: [hunmin log] gpu set complete
+2022-08-24 05:35:51,067 [ INFO] root: [hunmin log] num of gpu: 2
+2022-08-24 05:35:51,067 [ INFO] root: [hunmin log] the start line of the function [exec_train]
+2022-08-24 05:35:51,067 [ INFO] root: [hunmin log] tm.train_data_path : /data/aip/dataset/t3qai/pm/pm_990/ds_999
+2022-08-24 05:35:51,087 [ INFO] root: [hunmin log] Files and directories in /data/aip/dataset/t3qai/pm/pm_990/ds_999 :
+2022-08-24 05:35:51,087 [ INFO] root: [hunmin log] dir_list : ['dataset']
+2022-08-24 05:35:57,148 [ INFO] root: [hunmin log] : (image_number, image_size)
+2022-08-24 05:35:57,149 [ INFO] root: [hunmin log] : (124612, 784)
+2022-08-24 05:35:57,149 [ INFO] root: [hunmin log] : (144722, 784)
+2022-08-24 05:35:57,149 [ INFO] root: [hunmin log] : (166208, 784)
+2022-08-24 05:35:57,149 [ INFO] root: [hunmin log] : (117999, 784)
+2022-08-24 05:35:57,149 [ INFO] root: [hunmin log] : (130721, 784)
+2022-08-24 05:35:57,149 [ INFO] root: [hunmin log] : (134863, 784)
+2022-08-24 05:35:57,149 [ INFO] root: [hunmin log] : (134150, 784)
+2022-08-24 05:35:57,149 [ INFO] root: [hunmin log] : (127182, 784)
+2022-08-24 05:35:57,149 [ INFO] root: [hunmin log] : (120879, 784)
+2022-08-24 05:35:57,149 [ INFO] root: [hunmin log] : (186770, 784)
+2022-08-24 05:35:57,149 [ INFO] root: [hunmin log] envelope : 
+2022-08-24 05:35:57,150 [ INFO] root: [  0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0  11  17  26  34  34  37  51  51  51  66 112 123   1   0
+   0   0   0   0   0   0   1  29  63  97 132 166 200 235 255 255 255 255 255 255 255 255 255 255 255 255 117   0
+   0  12  78 138 180 215 248 255 255 255 247 213 179 145 110 102 102  85  85  85  74  68  68  69 215 255 101   0
+   0 122 255 249 199 164 130  96  61  27   1   0   0   0   0   0   0   0   0   0   0   0   1 164 252 255  94   0
+   0 120 255 250  59   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 115 255 116 255 113   0
+   0 116 255 213 230  25   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  30 245 165   0 255 121   0
+   0 113 255  44 239 198   6   0   0   0   0   0   0   0   0   0   0   0   0   0   0 171 242  25   3 255 119   0
+   0 110 255  11  77 253 146   0   0   0   0   0   0   0   0   0   0   0   0   0  66 255 114   0   5 255 116   0
+   0 107 255  14   0 131 255  97   0   0   0   0   0   0   0   0   0   0   0   4 210 214   5   0   8 255 114   0
+   0 104 255  18   0   2 183 245  62   0   0   0   0   0   0   0   0   0   0 112 255  68   0   0  10 255 112   0
+   0  98 255  25   0   0  17 206 246  77   0   0   0   0   0   0   0   0  23 240 173   0   0   0  12 255 109   0
+   0  68 255  58   0   0   0  12 187 252  98   0   0   0   0   0   0   0 159 246  32   0   0   0  15 255 107   0
+   0  30 255  96   0   0   0   0   9 179 254 112   0   0   0   0   0  56 254 127   0   0   0   0  17 255 104   0
+   0   1 245 134   0   0   0   0   0   4 162 255 151   6   0   0   4 203 222   9   0   0   0   0  19 255 102   0
+   0   0 209 172   0   0   0   0   0   0   1 125 254 227 110   0 148 254  77   0   0   0  41 118 196 255  96   0
+   0   0 173 236 219 224 170 170 139  99  54  14  62 182 255 194 255 129  14  67 143 220 255 253 199 121  11   0
+   0   0 105 241 250 244 204 207 240 255 255 255 228 221 239 255 243 237 255 255 243 173  97  22   0   0   0   0
+   0   0   0   0   0   0   0   0   0  29  70 113 149 153 153 179 155 141 109  67   7   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+2022-08-24 05:35:57,310 [ INFO] root: [hunmin log] X_train : (8000, 784)
+2022-08-24 05:35:57,310 [ INFO] root: [hunmin log] X_train_cnn : (8000, 28, 28, 1)
+2022-08-24 05:35:57,311 [ INFO] root: [hunmin log] Y_train : (8000,)
+2022-08-24 05:35:57,311 [ INFO] root: [hunmin log] Y_train_cnn : (8000, 10)
+2022-08-24 05:35:57,311 [ INFO] root: [hunmin log] class number : 10
+2022-08-24 05:36:00,422 [ INFO] tensorflow: Using MirroredStrategy with devices ('/job:localhost/replica:0/task:0/device:GPU:0', '/job:localhost/replica:0/task:0/device:GPU:1')
+2022-08-24 05:36:00,422 [ INFO] root: [hunmin log] gpu devices num 2
+2022-08-24 05:36:10,749 [ INFO] root: [hunmin log] model.summary() :
+2022-08-24 05:36:10,749 [ INFO] root: Model: "sequential"
+2022-08-24 05:36:10,749 [ INFO] root: _________________________________________________________________
+2022-08-24 05:36:10,749 [ INFO] root: Layer (type)                 Output Shape              Param #   
+2022-08-24 05:36:10,749 [ INFO] root: =================================================================
+2022-08-24 05:36:10,749 [ INFO] root: conv2d (Conv2D)              (None, 28, 28, 32)        320       
+2022-08-24 05:36:10,749 [ INFO] root: _________________________________________________________________
+2022-08-24 05:36:10,749 [ INFO] root: conv2d_1 (Conv2D)            (None, 28, 28, 64)        18496     
+2022-08-24 05:36:10,749 [ INFO] root: _________________________________________________________________
+2022-08-24 05:36:10,750 [ INFO] root: dropout (Dropout)            (None, 28, 28, 64)        0         
+2022-08-24 05:36:10,750 [ INFO] root: _________________________________________________________________
+2022-08-24 05:36:10,750 [ INFO] root: conv2d_2 (Conv2D)            (None, 28, 28, 64)        36928     
+2022-08-24 05:36:10,750 [ INFO] root: _________________________________________________________________
+2022-08-24 05:36:10,750 [ INFO] root: max_pooling2d (MaxPooling2D) (None, 14, 14, 64)        0         
+2022-08-24 05:36:10,750 [ INFO] root: _________________________________________________________________
+2022-08-24 05:36:10,750 [ INFO] root: flatten (Flatten)            (None, 12544)             0         
+2022-08-24 05:36:10,750 [ INFO] root: _________________________________________________________________
+2022-08-24 05:36:10,750 [ INFO] root: dense (Dense)                (None, 32)                401440    
+2022-08-24 05:36:10,750 [ INFO] root: _________________________________________________________________
+2022-08-24 05:36:10,750 [ INFO] root: dropout_1 (Dropout)          (None, 32)                0         
+2022-08-24 05:36:10,750 [ INFO] root: _________________________________________________________________
+2022-08-24 05:36:10,750 [ INFO] root: dense_1 (Dense)              (None, 10)                330       
+2022-08-24 05:36:10,750 [ INFO] root: =================================================================
+2022-08-24 05:36:10,751 [ INFO] root: Total params: 457,514
+2022-08-24 05:36:10,751 [ INFO] root: Trainable params: 457,514
+2022-08-24 05:36:10,751 [ INFO] root: Non-trainable params: 0
+2022-08-24 05:36:10,751 [ INFO] root: _________________________________________________________________
+2022-08-24 05:36:10,762 [ INFO] tensorflow: Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+2022-08-24 05:36:10,763 [ INFO] tensorflow: Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+2022-08-24 05:36:10,767 [ INFO] tensorflow: Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+2022-08-24 05:36:10,768 [ INFO] tensorflow: Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+2022-08-24 05:36:11,828 [ INFO] tensorflow: batch_all_reduce: 10 all-reduces with algorithm = nccl, num_packs = 1
+2022-08-24 05:36:11,965 [ INFO] tensorflow: Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+2022-08-24 05:36:11,968 [ INFO] tensorflow: Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+2022-08-24 05:36:11,972 [ INFO] tensorflow: Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+2022-08-24 05:36:11,975 [ INFO] tensorflow: Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+2022-08-24 05:36:13,274 [ INFO] tensorflow: batch_all_reduce: 10 all-reduces with algorithm = nccl, num_packs = 1
+2022-08-24 05:36:13,390 [ INFO] tensorflow: Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+2022-08-24 05:36:13,393 [ INFO] tensorflow: Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+2022-08-24 05:36:33,759 [ INFO] root: [hunmin log] For epoch 1, loss is 1.09.
+2022-08-24 05:36:36,288 [ INFO] root: [hunmin log] For epoch 2, loss is 0.64.
+2022-08-24 05:36:38,566 [ INFO] root: [hunmin log] For epoch 3, loss is 0.47.
+2022-08-24 05:36:40,806 [ INFO] root: [hunmin log] For epoch 4, loss is 0.41.
+2022-08-24 05:36:43,267 [ INFO] root: [hunmin log] For epoch 5, loss is 0.35.
+2022-08-24 05:36:45,382 [ INFO] root: [hunmin log] For epoch 6, loss is 0.30.
+2022-08-24 05:36:47,624 [ INFO] root: [hunmin log] For epoch 7, loss is 0.25.
+2022-08-24 05:36:49,808 [ INFO] root: [hunmin log] For epoch 8, loss is 0.23.
+2022-08-24 05:36:52,308 [ INFO] root: [hunmin log] For epoch 9, loss is 0.20.
+2022-08-24 05:36:54,880 [ INFO] root: [hunmin log] For epoch 10, loss is 0.19.
+2022-08-24 05:36:57,359 [ INFO] root: [hunmin log] For epoch 11, loss is 0.16.
+2022-08-24 05:36:59,812 [ INFO] root: [hunmin log] For epoch 12, loss is 0.17.
+2022-08-24 05:37:02,182 [ INFO] root: [hunmin log] For epoch 13, loss is 0.15.
+2022-08-24 05:37:04,565 [ INFO] root: [hunmin log] For epoch 14, loss is 0.14.
+2022-08-24 05:37:07,158 [ INFO] root: [hunmin log] For epoch 15, loss is 0.13.
+2022-08-24 05:37:09,331 [ INFO] root: [hunmin log] For epoch 16, loss is 0.12.
+2022-08-24 05:37:12,032 [ INFO] root: [hunmin log] For epoch 17, loss is 0.13.
+2022-08-24 05:37:14,180 [ INFO] root: [hunmin log] For epoch 18, loss is 0.12.
+2022-08-24 05:37:16,364 [ INFO] root: [hunmin log] For epoch 19, loss is 0.12.
+2022-08-24 05:37:18,460 [ INFO] root: [hunmin log] For epoch 20, loss is 0.10.
+2022-08-24 05:37:20,441 [ INFO] root: [hunmin log] loss : 0.5635856986045837
+2022-08-24 05:37:20,442 [ INFO] root: [hunmin log] acc : 0.890999972820282
+2022-08-24 05:37:22,606 [ INFO] root: [hunmin log] accuracy and loss curve plot for platform
+2022-08-24 05:37:22,606 [ INFO] root: [hunmin log] tm.model_path : /data/aip/logs/t3qai/train/ln_3057/le_3611/1
+2022-08-24 05:37:22,733 [ INFO] root: [hunmin log] Files and directories in /data/aip/logs/t3qai/train/ln_3057/le_3611/1 :
+2022-08-24 05:37:22,734 [ INFO] root: [hunmin log] dir_list : ['logs', 'cnn_model.h5']
+2022-08-24 05:37:22,734 [ INFO] root: [hunmin log]  the finish line of the function [exec_train]
+2022-08-24 05:37:22,739 [ INFO] root: [hunmin log] the end line of the function [train]
+
+
+
+2. 모델 배포 
+
+모델 배포 버튼 누르고
+
+아래의 팝업창이 뜨면
+
+학습모델 배포
+모델명을 입력하고 추론모델로 배포가 가능합니다.(50자이내)
+
+image_classification_trainmodel-2022-08-24
+
+배포 버튼 누름
+
+
+
+
+
